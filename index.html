@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *, *::after, *::before{
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: rgb(219, 219, 219);
+        margin: 75px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .container .card {
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        background-color: steelblue;
+        cursor: move;
+        transition: all 125ms ease-in-out;
+        user-select: none;
+        -moz-user-select: none;
+    }
+    
+
+    .opacity-25 {
+        opacity: 0.25;
+        position: relative;
+        z-index: -1;
+    }
+    
+    .clone {
+        -webkit-box-shadow: 0px 4px 15px -5px #000000; 
+        box-shadow: 0px 4px 15px -9px #000000;
+        z-index: 1000;
+        opacity: 1;
+        padding: 10px;
+        text-align: center;
+        background-color: steelblue;
+        border-radius: 5px;
+        cursor: move;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+</style>
+<body>
+    <div class="clone"></div>
+    <div class="container" draggable="false">
+    </div>
+    
+</body>
+<script src="./script.js"></script>
+</html>
